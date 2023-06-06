@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/custom_bg"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar Start  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/custom_action_bar"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="24dp"
+            >
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/menu_icon"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <TextView
+                    android:id="@+id/toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:text="Profit Calculator"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+    <!-- Toolbar End  -->
+
+    <!-- Edit Text Start  -->
+    <EditText
+        android:id="@+id/edTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Purchase Price"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/custom_edittext"
+        />
+
+    <EditText
+        android:id="@+id/edMRP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Maximum Retail Price"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/custom_edittext"
+        />
+    <!-- Edit Text End  -->
+
+    <!-- Button Start  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:visibility="visible"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/custom_bg"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="CALCULATE"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!-- Button End  -->
+
+
+    <!-- TV Display Start  -->
+    <LinearLayout
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_edittext"
+        android:visibility="gone"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+    <!-- TV Display End  -->
+
+
+
+    <!-- TP Price Start   -->
+    <LinearLayout
+        android:id="@+id/tvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_edittext"
+        android:visibility="gone"
+        android:gravity="center"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/k"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/custom_bg"
+                >
+                <TextView
+                    android:id="@+id/tvk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kellogg's tp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/p"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/custom_bg"
+                >
+                <TextView
+                    android:id="@+id/tvp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pringles tp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <!-- TP Price End   -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:padding="25dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S.M.Hamidul"
+            android:gravity="center"
+            android:textColor="#26000000"
+            android:textStyle="italic"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
