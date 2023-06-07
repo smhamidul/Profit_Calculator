@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView menu;
     int m,ik, ip,value,bk;
 
-    TextView SmHamidul;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
