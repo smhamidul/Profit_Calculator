@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView menu;
     int m,ik, ip,value,bk;
 
-
+    TextView git;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
